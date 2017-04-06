@@ -1,5 +1,8 @@
 var webpack = require('webpack')
 var path = require('path')
+const autoprefixer = require('autoprefixer');
+//修改antd.design主题文件
+const theme = require('./theme.config.js')
 
 module.exports = {
     entry:{
@@ -39,12 +42,21 @@ module.exports = {
             loader: 'url',
         }, {
             test: /\.(less)$/,
-            loaders: ['style', 'css', 'less'],
+            loaders:[
+                        "style",
+                        "css",
+												`less-loader?{"sourceMap":true,"modifyVars":${JSON.stringify(theme)}}`,
+                    ]
         }, {
             test: /\.(css)$/,
             loaders: ['style', 'css'],
         }]
     },
+    postcss: [
+        autoprefixer({
+            browsers: ['last 2 versions']
+        })
+    ],
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js"),
         new webpack.DefinePlugin({

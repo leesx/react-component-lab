@@ -14,7 +14,7 @@ function testable(target) {
   target.isTestable = true;
   target.isOk = 'are you ok ?'
   target.tellMsg =()=>{
-    message.success('告诉你一个好消息',5)
+    message.success('告诉你一个好消息',1)
   }
 }
 
@@ -64,6 +64,7 @@ obj2.foo()
 
 
 // async
+function takeAsync(){}
 async function f() {
   async function* gen() {
     yield 'a';
