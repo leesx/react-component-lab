@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-import { Layout, Icon } from 'antd';
+import { Layout, Icon, Modal } from 'antd';
 const { Header, Sider, Content } = Layout;
 import LeftMenu from './LeftMenu';
+
+
 
 export default class App extends Component{
     constructor(props){
@@ -10,7 +12,20 @@ export default class App extends Component{
           collapsed: false,
         };
     }
-
+    componentDidMount(){
+      this.welcomeLab()
+    }
+    welcomeLab() {
+      Modal.info({
+        title: '来自世界最友好的提示',
+        content: (
+          <div>
+            <p>这是一个react 组件实验室平台，这个平台集成了React 、ES2015、 Babel、Ant.design 。你可以在平台随意写你的react代码，而不用担心环境配置问题。</p>
+          </div>
+        ),
+        onOk() {},
+      });
+    }
     toggle=()=>{
       this.setState({
         collapsed: !this.state.collapsed,
