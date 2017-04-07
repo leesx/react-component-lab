@@ -3,8 +3,6 @@ import { findDOMNode } from 'react-dom'
 
 import './index.less'
 
-
-
 export default  class Calendar extends Component{
 
     constructor(props, context) {
@@ -17,11 +15,6 @@ export default  class Calendar extends Component{
 
     componentWillReceiveProps(nextProps){
 
-    }
-
-    handleClickCell(date){
-        const d = new Date(date.date)
-        console.log(`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`)
     }
 
     renderMonthTd(){
@@ -58,7 +51,7 @@ export default  class Calendar extends Component{
                 tdArr.push(
                   <td
                     style={ num < 0 || num === 0 || (num > totalDays) ? { background:'#eee'} : null}
-                    onClick={ this.handleClickCell.bind(this,{date}) }
+                    onClick={ this.props.handleClickCell.bind(this,{date}) }
                   >
                   { (date.getMonth() === mm) && date.getDate() === dd ? <span className="day current-day">{ date.getDate() }</span> : <span className="day">{date.getDate()}</span> }
                   </td>

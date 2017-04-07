@@ -13,14 +13,19 @@ export default class App extends Component{
         };
     }
     componentDidMount(){
-      this.welcomeLab()
+      if(window.localStorage){
+        if(!localStorage.welcome_react_lab){
+          this.welcomeLab()
+          localStorage.setItem('welcome_react_lab',true)
+        }
+      }
     }
     welcomeLab() {
       Modal.info({
         title: '来自世界最友好的提示',
         content: (
           <div>
-            <p>这是一个react 组件实验室平台，这个平台集成了React 、ES2015、 Babel、Ant.design 。你可以在平台随意写你的react代码，而不用担心环境配置问题。</p>
+            <p>这是一个react 组件实验平台，这个平台集成了React 、ES2015、 Babel、Ant.design 。你可以在平台随意写你的react代码，而不用担心环境配置问题。</p>
           </div>
         ),
         onOk() {},

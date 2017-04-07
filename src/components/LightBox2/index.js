@@ -53,6 +53,7 @@ export default  class Lightbox2 extends Component{
     }
 
     closeLightBox=()=>{
+      console.log('关闭')
       this.setState({
         lightboxIsOpen:false
       })

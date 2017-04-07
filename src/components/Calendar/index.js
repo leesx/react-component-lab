@@ -34,7 +34,7 @@ export default  class Calendar extends Component{
         if(selected === 'month'){
           this.setState(
               {
-                  mm: dir === 2 ? mm+1 : m-1
+                  mm: dir === 2 ? mm+1 : mm-1
               }
           )
         }else if(selected === 'week'){
@@ -60,7 +60,7 @@ export default  class Calendar extends Component{
       if(selected === 'month'){
         return (
           <div className="fc-view fc-month-view fc-basic-view">
-            <CalendarMonth date={date} />
+            <CalendarMonth date={date} handleClickCell={this.handleClickCell} />
           </div>
         )
       }else if(selected === 'week'){
@@ -80,6 +80,16 @@ export default  class Calendar extends Component{
         selected:mode
       })
     }
+
+    handleClickCell=(date)=>{
+        const d = new Date(date.date)
+        if(d.getMonth()+1 !== this.state.mm+1){
+          this.setState({
+            mm:d.getMonth(),
+          })
+        }
+        console.log(`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`)
+    }
     renderTit(){
       const {yy,mm,dd,selected} = this.state
 
@@ -89,10 +99,10 @@ export default  class Calendar extends Component{
           <h2>{ date.getFullYear() } 年 { date.getMonth()+1} 月</h2>
         )
       }else if(selected === 'week'){
-        let firstDayWeek = new Date(yy,mm,dd).getDay()
-        firstDayWeek = firstDayWeek === 0 ? 7 : firstDayWeek
-        const begin = new Date(yy,mm,dd-firstDayWeek+1)
-        const end = new Date(yy,mm,dd-firstDayWeek+7)
+        let curDayWeek = new Date(yy,mm,dd).getDay()
+        curDayWeek = curDayWeek === 0 ? 7 : curDayWeek
+        const begin = new Date(yy,mm,dd-curDayWeek+1)
+        const end = new Date(yy,mm,dd-curDayWeek+7)
 
         return (
           <h2>
@@ -108,15 +118,12 @@ export default  class Calendar extends Component{
     handleClickToday=()=>{
       const date = new Date()
       this.setState({
-        yy:date.getFullYear(),
+        //不要设置dd
         mm:date.getMonth(),
-        dd:date.getDate(),
       })
     }
     render() {
-      const {yy,mm,dd,selected} = this.state
-      const date =  new Date(yy,mm,dd)
-
+      const {selected} = this.state
         return (
             <div className="fc fc-unthemed fc-ltr">
                 <div className="fc-toolbar fc-header-toolbar">

@@ -34,17 +34,22 @@ export default  class CalendarWeek extends Component{
       const yy = d.getFullYear()
       const mm = d.getMonth()
       const dd = d.getDate()
+      
       const weekStr = '一二三四五六日'
       // const {yy,mm,dd} = this.state
       //获取当前是周几
-      let firstDayWeek = new Date(yy,mm,dd).getDay()
-      firstDayWeek = firstDayWeek === 0 ? 7 : firstDayWeek
+      let curDayWeek = new Date(yy,mm,dd).getDay()
+      curDayWeek = curDayWeek === 0 ? 7 : curDayWeek
       const tdArr = []
 
       for(let j=1;j<=7;j++){
-        let date = new Date(yy,mm,dd-firstDayWeek+j)
+        let date = new Date(yy,mm,dd-curDayWeek+j)
         tdArr.push(
-          <th>{`周${weekStr[j-1]}/${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`}</th>
+          <th>
+            <span className={curDayWeek === j ? 'current-week' : null}>
+              {`周${weekStr[j-1]}/${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`}
+            </span>
+          </th>
         )
       }
 

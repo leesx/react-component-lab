@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "rc-lightbox",
+        "scope": null,
+        "escapedName": "rc-lightbox",
+        "name": "rc-lightbox",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\findReact"
+    ]
+  ],
+  "_from": "rc-lightbox@latest",
+  "_id": "rc-lightbox@2.1.3",
+  "_inCache": true,
+  "_location": "/rc-lightbox",
+  "_nodeVersion": "7.7.4",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/rc-lightbox-2.1.3.tgz_1490958862337_0.3163453689776361"
+  },
+  "_npmUser": {
+    "name": "leesx",
+    "email": "1058315063@qq.com"
+  },
+  "_npmVersion": "4.1.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "rc-lightbox",
+    "scope": null,
+    "escapedName": "rc-lightbox",
+    "name": "rc-lightbox",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/rc-lightbox/-/rc-lightbox-2.1.3.tgz",
+  "_shasum": "b9236bc597897033276a7c2f18ecbf5c1e9e4c4b",
+  "_shrinkwrap": null,
+  "_spec": "rc-lightbox",
+  "_where": "E:\\findReact",
+  "author": {
+    "name": "leesx"
+  },
+  "bugs": {
+    "url": "https://github.com/leesx/rc-lightbox/issues"
+  },
+  "dependencies": {},
+  "description": "This is an excellent lightbox. It is modeled on the jQuery version of the lightbox2. It has a great user experience",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b9236bc597897033276a7c2f18ecbf5c1e9e4c4b",
+    "tarball": "https://registry.npmjs.org/rc-lightbox/-/rc-lightbox-2.1.3.tgz"
+  },
+  "gitHead": "ec6caeea8c4001feabfeff914d2c65f06232b536",
+  "homepage": "https://github.com/leesx/rc-lightbox#readme",
+  "keywords": [
+    "rc-lightbox",
+    "react-images",
+    "react-lightbox2",
+    "react-lightbox"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "leesx",
+      "email": "1058315063@qq.com"
+    }
+  ],
+  "name": "rc-lightbox",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leesx/rc-lightbox.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.1.3"
+}
