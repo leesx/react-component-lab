@@ -118,8 +118,9 @@ export default  class Calendar extends Component{
     handleClickToday=()=>{
       const date = new Date()
       this.setState({
-        //不要设置dd
+        yy:date.getFullYear(),
         mm:date.getMonth(),
+        dd:date.getDate(),
       })
     }
     render() {
