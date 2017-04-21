@@ -67,9 +67,9 @@ export default function renderFullPage(html, initialState) {
       </head>
       <body>
         <div id="root" ></div>
-        <script src="//cdn.bootcss.com/react/0.14.7/react.min.js"></script>
-        <script src="//cdn.bootcss.com/react/0.14.7/react-dom.min.js"></script>
-        <script src="//cdn.bootcss.com/immutable/3.8.1/immutable.min.js"></script>
+        <script src="https://cdn.bootcss.com/react/15.5.4/react.min.js"></script>
+        <script src="https://cdn.bootcss.com/react/15.5.4/react-dom.min.js"></script>
+        <script src="https://cdn.bootcss.com/immutable/3.8.1/immutable.min.js"></script>
         <script src="/scripts/vendor.bundle.js"></script>
         <script src="/scripts/main.min.js"></script>
       </body>
