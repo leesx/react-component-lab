@@ -1,7 +1,7 @@
 {
   "apps": [{
 		"name": "react-component-lab",
-		"script": "./bin/www",
+		"script": "./bin",
 		"node_args": "--harmony",
 		"watch": true,
 		"interpreter" : "babel-node",
