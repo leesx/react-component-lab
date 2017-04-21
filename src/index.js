@@ -18,6 +18,7 @@ import Vertical from './components/Sortable/vertical';
 import DragDemo from './components/Drag';
 import TestBabel from './components/TestBabel';
 import Lightbox2 from './components/LightBox2';
+import LazyImagesDemo from './components/LazyImages/__demo.js';
 
 render((
     // withExampleBasename(browserHistory, __dirname)
@@ -30,6 +31,7 @@ render((
       <Route path="/drag" component={DragDemo}/>
       <Route path="/lightbox2" component={Lightbox2}/>
       <Route path="/testbabel" component={TestBabel}/>
+      <Route path="/lazyimage" component={LazyImagesDemo}/>
       <Route path="/sortable" component={SortableDemo}>
           <Route path="containment" component={Containment} />
           <Route path="vertical" component={Vertical} />

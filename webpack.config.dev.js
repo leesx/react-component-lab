@@ -10,9 +10,9 @@ module.exports = {
       vendor: ['redux', 'react-redux', 'react-router']
     } ,
     output: {
-        publicPath: 'http://localhost:8989/lib/',
+        publicPath: 'http://lab.lishangxi.cn/lib/',
         filename: '[name].min.js',
-		chunkFilename: '[id].chunk.js'
+		    chunkFilename: '[id].chunk.js'
     },
     externals: {
         react: 'React',
@@ -72,7 +72,7 @@ module.exports = {
         devtool: 'eval',
         hot: true,
         inline: true,
-        port: 8989,
+        port: 8990,
     },
     devtool: 'source-map',
 };

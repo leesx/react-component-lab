@@ -1,0 +1,11 @@
+{
+  "apps": [{
+		"name": "react-component-lab",
+		"script": "./bin/www",
+		"node_args": "--harmony",
+		"watch": true,
+		"interpreter" : "babel-node",
+		"mode": "fork",
+		"log_date_format": "YYYY - MM - DD HH: mm Z"
+	}]
+}

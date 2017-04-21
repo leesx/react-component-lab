@@ -28,7 +28,7 @@ export default class LeftMenu extends Component{
                  <Link to="/scrollbar">模拟滚动条demo</Link>
                </Menu.Item>
                <Menu.Item key="4">
-                 <Link to="/lightbox">图片</Link>
+                 <Link to="/lazyimage">图片延迟</Link>
                </Menu.Item>
                <Menu.Item key="5">
                  <Link to="/lightbox2">仿照lightbox2</Link>

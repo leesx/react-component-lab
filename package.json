@@ -6,24 +6,22 @@
   "scripts": {
     "start": "webpack-dev-server  --progress --colors --display-error-details --display-modules --config webpack-dev-jane.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "debug": "webpack-dev-server --progress --colors --display-error-details --display-modules --config webpack-dev.config.js",
-    "build": "BABEL_ENV=production webpack --config webpack-prod.config.js --colors --display-error-details --progress",
-    "ren": "BABEL_ENV=production webpack --config webpack-prod.ren.config.js --colors --display-error-details --progress",
-    "up": "BABEL_ENV=production webpack --config webpack-prod.up.config.js --colors --display-error-details --progress",
-    "buildw": "webpack --set-env-NODE_ENV=production --config webpack-prod-win.config.js --colors --display-error-details --progress",
-    "renw": "webpack --set-env-NODE_ENV=production --config webpack-prod-win.ren.config.js --colors --display-error-details --progress",
-    "upw": "webpack --set-env-NODE_ENV=production --config webpack-prod-win.up.config.js --colors --display-error-details --progress"
+    "debug": "webpack-dev-server --progress --colors --display-error-details --display-modules --config webpack.config.dev.js",
+    "build:server": "cross-env BABEL_ENV=prodnode BABEL_DISABLE_CACHE=1 babel server -d bin --ignore client && echo '后端程序：编译完成(其实不是后端程序，就是用bable把jsx和es6编译成浏览器能识别的代码)'",
+    "build:client": "cross-env BABEL_ENV=production webpack --config webpack.config.prod.js --colors --progress && echo '前端程序：编译完成'",
+    "build": "npm run build:server && npm run build:client",
+    "prod": "pm2 start process.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yy-chaok/practices.git"
+    "url": ""
   },
-  "author": "C. <4019980@qq.com> (https://github.com/yinker), jianyu <674621850@qq.com> (https://github.com/janeluck)",
+  "author": "leesx",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yy-chaok/practices/issues"
+    "url": "https://github.com/leesx/react-component-lab"
   },
-  "homepage": "https://github.com/yy-chaok/practices#readme",
+  "homepage": "https://github.com/leesx/react-component-lab#readme",
   "devDependencies": {
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
@@ -60,6 +58,8 @@
     "antd": "^2.9.0",
     "aphrodite": "^0.5.0",
     "babel-plugin-import": "^1.1.1",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
     "core-decorators": "^0.15.0",
     "echarts": "^3.2.2",
     "element-resize-event": "^2.0.5",
@@ -69,6 +69,7 @@
     "isomorphic-fetch": "^2.2.1",
     "keymirror": "^0.1.1",
     "moment": "^2.12.0",
+    "morgan": "^1.8.1",
     "normalizr": "^2.0.0",
     "postcss": "^5.2.16",
     "random-string": "^0.1.2",
@@ -82,6 +83,7 @@
     "react-dom": "^0.14.7",
     "react-imageloader": "^2.1.0",
     "react-images": "^0.5.2",
+    "react-lazyload": "^2.2.5",
     "react-motion": "^0.4.5",
     "react-redux": "^4.4.1",
     "react-router": "^2.0.1",

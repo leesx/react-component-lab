@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars';
 
 export default class ScrollBarDmeo extends Component{
-    constructor(super) {
+    constructor(props) {
         super()
     }
 
