@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server  --progress --colors --display-error-details --display-modules --config webpack-dev-jane.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "webpack-dev-server --progress --colors --display-error-details --display-modules --config webpack.config.dev.js",
     "build:server": "cross-env BABEL_ENV=prodnode BABEL_DISABLE_CACHE=1 babel server -d bin --ignore client && echo '后端程序：编译完成(其实不是后端程序，就是用bable把jsx和es6编译成浏览器能识别的代码)'",

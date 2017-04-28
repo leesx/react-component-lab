@@ -19,6 +19,7 @@ import DragDemo from './components/Drag';
 import TestBabel from './components/TestBabel';
 import Lightbox2 from './components/LightBox2';
 import LazyImagesDemo from './components/LazyImages/__demo.js';
+import UploadPhoto from './components/UploadPhoto';
 
 render((
     // withExampleBasename(browserHistory, __dirname)
@@ -32,6 +33,7 @@ render((
       <Route path="/lightbox2" component={Lightbox2}/>
       <Route path="/testbabel" component={TestBabel}/>
       <Route path="/lazyimage" component={LazyImagesDemo}/>
+      <Route path="/uploadphoto" component={UploadPhoto}/>
       <Route path="/sortable" component={SortableDemo}>
           <Route path="containment" component={Containment} />
           <Route path="vertical" component={Vertical} />

@@ -42,6 +42,9 @@ export default class LeftMenu extends Component{
                <Menu.Item key="8">
                  <Link to="/sortable">拖拽排序</Link>
                </Menu.Item>
+               <Menu.Item key="9">
+                 <Link to="/uploadphoto">头像上传</Link>
+               </Menu.Item>
              </SubMenu>
              <SubMenu key="sub2" title={<span><Icon type="mail" /><span>工具类</span></span>}>
                <Menu.Item key="1">
