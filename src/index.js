@@ -20,6 +20,7 @@ import TestBabel from './components/TestBabel';
 import Lightbox2 from './components/LightBox2';
 import LazyImagesDemo from './components/LazyImages/__demo.js';
 import UploadPhoto from './components/UploadPhoto';
+import Magnifier from './components/Magnifier';
 
 render((
     // withExampleBasename(browserHistory, __dirname)
@@ -34,6 +35,7 @@ render((
       <Route path="/testbabel" component={TestBabel}/>
       <Route path="/lazyimage" component={LazyImagesDemo}/>
       <Route path="/uploadphoto" component={UploadPhoto}/>
+      <Route path="/magnifier" component={Magnifier}/>
       <Route path="/sortable" component={SortableDemo}>
           <Route path="containment" component={Containment} />
           <Route path="vertical" component={Vertical} />
