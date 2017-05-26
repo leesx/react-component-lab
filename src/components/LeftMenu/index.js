@@ -28,7 +28,7 @@ export default class LeftMenu extends Component{
                  <Link to="/scrollbar">模拟滚动条demo</Link>
                </Menu.Item>
                <Menu.Item key="4">
-                 <Link to="/lazyimage">图片延迟</Link>
+                 <Link to="/lazyimage">图片懒加载组件</Link>
                </Menu.Item>
                <Menu.Item key="5">
                  <Link to="/lightbox2">仿照lightbox2</Link>
@@ -51,10 +51,10 @@ export default class LeftMenu extends Component{
              </SubMenu>
              <SubMenu key="sub2" title={<span><Icon type="mail" /><span>工具类</span></span>}>
                <Menu.Item key="1">
-                 <Link to="/calendar">日历demo</Link>
+                 <Link to="/reactvideo">React视频播放器</Link>
                </Menu.Item>
                <Menu.Item key="2">
-                 <Link to="/calendar">日历demo</Link>
+                 <Link to="/materialUiDemo">MaterialUiDemo</Link>
                </Menu.Item>
                <Menu.Item key="3">
                  <Link to="/scrollbar">模拟滚动条demo</Link>

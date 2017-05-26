@@ -4,7 +4,7 @@ import { Spin } from 'antd';
 //import LazyImage from './index.js'
 
 import LazyLoad from 'react-lazyload';
-
+import './index.less'
 
 const MockData2 = [{
     src:'http://www.people.com.cn/NMediaFile/2016/0902/MAIN201609021911314859050338728.jpg',
@@ -44,11 +44,14 @@ const MockData2 = [{
   src:'https://gss0.bdstatic.com/5eR1dDebRNRTm2_p8IuM_a/res/r/image/2016-09-02/177e848bf4f0df538576f5422029c3e6.jpg'
 }]
 
+/**
+ * 占位组件
+ * 注意:要设置高度
+ */
 function PlaceholderComponent() {
   return (
-     <div className="placeholder">
-
-     <Spin />
+     <div className="placeholder" style={{height:300}}>
+       <Spin />
      </div>
   )
 }
@@ -66,11 +69,12 @@ export default  class LazyImagesDemo extends Component{
         return (
             data.map((item,index)=>{
                 return (
-                  <li key={`img_${index}`} >
-                    <LazyLoad  once={false}  height={300} offset={[-100, 0]} placeholder={<Spin />}>
-                      <img src={item.src} />
-                    </LazyLoad>
-                  </li>
+                  <LazyLoad key={index} once={true}  height={300} offset={[-100, 0]} placeholder={PlaceholderComponent()}>
+                      <li className="list-item">
+                        <img src={item.src} />
+                      </li>
+                  </LazyLoad>
+
                 )
             })
         )
@@ -84,9 +88,7 @@ export default  class LazyImagesDemo extends Component{
         return (
             <div className="images-wrapper">
 
-                <h1>===============图片延迟demo</h1>
-                <Spin />
-                <h2>第三组图片</h2>
+                <h1>图片懒加载组件</h1>
                 <ul className="img-list clearfix">
                     { this.renderImgList(MockData2) }
                 </ul>
