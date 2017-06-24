@@ -11,7 +11,7 @@ export default function renderFullPage(html, initialState) {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hi，React 组件实验室</title>
+        <title>Hi，React 组件实验室2017</title>
         <style>
           body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
               margin: 0;
